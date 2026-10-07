@@ -4,7 +4,7 @@
 
 **Yuchen Zhu**, **Chenyi Xu**, **Yulin Zhang**, **Gang Xu**, **Wentao Zhu**
 
-![Project Page](https://img.shields.io/badge/Project%20Page-juno--policy.github.io-blue?style=for-the-badge&logo=github)![Models on Hugging Face](https://img.shields.io/badge/HuggingFace-Models-orange?style=for-the-badge&logo=huggingface)![Paper PDF](https://img.shields.io/badge/arXiv-coming%20soon-lightgrey?style=for-the-badge&logo=arxiv)
+![Project Page](https://img.shields.io/badge/Project%20Page-juno--policy.github.io-blue?style=for-the-badge&logo=github)![Models on Hugging Face](https://img.shields.io/badge/HuggingFace-Models-orange?style=for-the-badge&logo=huggingface)[![Paper PDF](https://img.shields.io/badge/Paper-PDF-lightgrey?style=for-the-badge&logo=adobeacrobatreader)](assets/Juno_main.pdf)
 
 ![Juno Example Rollout](assets/juno_readme5.png)
 

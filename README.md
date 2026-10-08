@@ -17,6 +17,7 @@ The release is organized as a small, reproducible repository. It contains the Ju
 ## News
 
 **[2026/10]** 🚀 The paper is available on [arXiv](https://arxiv.org/abs/2610.09940).
+
 **[2026/10]** 🚀 Initial standalone release of the Juno Bridge/Fractal policy-learning recipe.
 
 **TODO**

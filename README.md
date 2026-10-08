@@ -4,7 +4,7 @@
 
 **Yuchen Zhu**, **Chenyi Xu**, **Yulin Zhang**, **Gang Xu**, **Wentao Zhu**
 
-![Project Page](https://img.shields.io/badge/Project%20Page-juno--policy.github.io-blue?style=for-the-badge&logo=github)![Models on Hugging Face](https://img.shields.io/badge/HuggingFace-Models-orange?style=for-the-badge&logo=huggingface)[![Paper PDF](https://img.shields.io/badge/Paper-PDF-lightgrey?style=for-the-badge&logo=adobeacrobatreader)](assets/Juno_main.pdf)
+![Project Page](https://img.shields.io/badge/Project%20Page-juno--policy.github.io-blue?style=for-the-badge&logo=github)![Models on Hugging Face](https://img.shields.io/badge/HuggingFace-Models-orange?style=for-the-badge&logo=huggingface)[![arXiv](https://img.shields.io/badge/arXiv-2610.09940-b31b1b?style=for-the-badge&logo=arxiv)](https://arxiv.org/abs/2610.09940)
 
 ![Juno Example Rollout](assets/juno_readme5.png)
 
@@ -16,11 +16,13 @@ The release is organized as a small, reproducible repository. It contains the Ju
 
 ## News
 
+**[2026/10]** 🚀 The paper is available on [arXiv](https://arxiv.org/abs/2610.09940).
 **[2026/10]** 🚀 Initial standalone release of the Juno Bridge/Fractal policy-learning recipe.
 
 **TODO**
 
 - [ ] TTT code
+- [ ] Checkpoints Release
 - [ ] RoboCasa training code
 - [ ] JEPA training code
 
@@ -37,24 +39,11 @@ The release is organized as a small, reproducible repository. It contains the Ju
 *Training pipeline of the released Bridge/Fractal policy-learning stage. Dataset and checkpoint paths are runtime inputs; the launcher records the resolved config and run directory through the Juno trainer.*
 
 
-
-**Key Features**
-
-- [x] **Control-aligned predictive latents.** Future-frame JEPA targets are trained alongside the action policy.
-- [x] **Single-file Juno policy.** `JunoPolicy` is registered as `juno-policy` and directly inherits `Qwen_GR00T`; JEPA alignment, patch fusion, future-frame targets, and the MoT reasoning branch live in `juno/model/framework/VLM4A/juno_policy.py`.
-- [x] **Predictive control signals.** The default recipe uses eight reasoning queries and eight future frames sampled at stride two.
-- [x] **Portable training entry point.** `scripts/run_bridge_fractal_jepa7_mot_train.sh` resolves paths from the repository root and does not require an AWA checkout.
-- [x] **Paper-linked assets.** The overview and pipeline figures are extracted from the accompanying paper for convenient reference.
-
-
-
 **What is released**
 
-This repository currently releases the **Bridge/Fractal policy-learning stage** used to train the `juno-policy` model. The full paper also studies JEPA pretraining and Juno-TTT adaptation; those stages are described in the paper and linked project materials, but are not claimed to be reproduced by this launcher.
+This repository releases the **Bridge/Fractal policy-learning stage** used to train the `juno-policy` model. JEPA pretraining and Juno-TTT adaptation are described in the paper.
 
-The current configuration is the `1005` working-tree recipe: a frozen ViT-Base CLS/patch target, alignment weight capped at `0.2`, and input cross-attention scale `0.5`. These settings are recorded explicitly in `configs/bridge_fractal_jepa7_mot_1005.yaml` so that this code release is auditable.
-
-The public implementation is deliberately flattened so that the released model can be read from one file:
+The released configuration uses a frozen ViT-Base CLS/patch target, an alignment weight of `0.2`, and an input cross-attention scale of `0.5`, as recorded in `configs/bridge_fractal_jepa7_mot_1005.yaml`.
 
 ```text
 juno_policy.py
@@ -65,8 +54,6 @@ juno_policy.py
     ├── Qwen action backbone
     └── Mixture-of-Transformers reasoning branch
 ```
-
-The older JEPA3/4/5/6/7 intermediate classes are not part of this repository. Their behavior is composed directly inside `JunoPolicy`, which keeps the registry surface small and makes the training path easier to audit.
 
 ---
 
@@ -231,18 +218,21 @@ Juno/
 
 
 
-<!-- ## ✍️ Citation & Copyright
+## Cite Juno
 
-This repository is released under the license in `[LICENSE](LICENSE)`. Please cite the accompanying paper with the metadata in `[CITATION.cff](CITATION.cff)`.
+If you use Juno, please cite the [paper](https://arxiv.org/abs/2610.09940):
 
 ```bibtex
-@inproceedings{zhu2027juno,
-  title={Juno: Taming Predictive Latents for Vision-Language-Action Models},
-  author={Zhu, Yuchen and Xu, Chenyi and Zhang, Yulin and Xu, Gang and Zhu, Wentao},
-  booktitle={International Conference on Learning Representations},
-  year={2027}
+@misc{zhu2026junotamingpredictivelatents,
+      title={Juno: Taming Predictive Latents for Vision-Language-Action Models}, 
+      author={Yuchen Zhu and Chenyi Xu and Yulin Zhang and Gang Xu and Wentao Zhu},
+      year={2026},
+      eprint={2610.09940},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2610.09940}, 
 }
-``` -->
+```
 
 
 

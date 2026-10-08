@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 title: "Juno: Taming Predictive Latents for Vision-Language-Action Models"
 type: software
-message: "If you use Juno, please cite the accompanying ICLR 2027 paper."
+message: "If you use Juno, please cite the accompanying paper."
 authors:
   - family-names: Zhu
     given-names: Yuchen
@@ -13,6 +13,27 @@ authors:
     given-names: Gang
   - family-names: Zhu
     given-names: Wentao
-year: 2027
+year: 2026
+url: "https://arxiv.org/abs/2610.09940"
 license: Apache-2.0
 repository-code: "https://github.com/juno-policy/Juno"
+preferred-citation:
+  type: article
+  title: "Juno: Taming Predictive Latents for Vision-Language-Action Models"
+  authors:
+    - family-names: Zhu
+      given-names: Yuchen
+    - family-names: Xu
+      given-names: Chenyi
+    - family-names: Zhang
+      given-names: Yulin
+    - family-names: Xu
+      given-names: Gang
+    - family-names: Zhu
+      given-names: Wentao
+  year: 2026
+  url: "https://arxiv.org/abs/2610.09940"
+  identifiers:
+    - type: url
+      value: "https://arxiv.org/abs/2610.09940"
+      description: "arXiv:2610.09940"

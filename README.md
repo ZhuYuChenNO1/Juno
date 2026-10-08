@@ -2,7 +2,7 @@
 
 # Juno: Taming Predictive Latents for Vision-Language-Action Models
 
-**Yuchen Zhu**, **Chenyi Xu**, **Yulin Zhang**, **Gang Xu**, **Wentao Zhu**
+**[Yuchen Zhu](https://zhuyuchenno1.github.io/)**, **[Chenyi Xu](https://chenyixu04.github.io/)**, **[Yulin Zhang](https://zhangyl4.github.io/)**, **[Gang Xu](https://scholar.google.com/citations?user=dt2v914AAAAJ&hl=ja)**, **[Wentao Zhu](https://wentao.live/)**
 
 [![Project Page](https://img.shields.io/badge/Project%20Page-juno--policy.github.io-blue?style=for-the-badge&logo=github)](https://juno-policy.github.io/)[![Models on Hugging Face](https://img.shields.io/badge/HuggingFace-Models-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/LightningNO1/Juno)[![arXiv](https://img.shields.io/badge/arXiv-2610.09940-b31b1b?style=for-the-badge&logo=arxiv)](https://arxiv.org/abs/2610.09940)
 
